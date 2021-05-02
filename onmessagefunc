@@ -1,0 +1,17 @@
+@client.event
+async def on_message(message):
+  print(message)
+  if(message.author.bot): 
+    return
+  else:
+    print(message.author)
+    sender_id = str(message.author)
+    value = db[sender_id]
+    value = value + 1
+    if db[sender_id] % 10 == 0:
+      level_amount = db[sender_id] / 10
+      await message.channel.send(f'You are now level {level_amount}')
+      db[sender_id] = value
+    
+    
+  
