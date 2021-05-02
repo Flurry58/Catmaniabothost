@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from discord.utils import get
+import mysql.connector
 import os
 
 client = commands.Bot(command_prefix='&')
