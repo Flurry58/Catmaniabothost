@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 from discord.utils import get
-from replit import db
 import os
 
 client = commands.Bot(command_prefix='&')
