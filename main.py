@@ -8,8 +8,12 @@ import os
 mydb = mysql.connector.connect(
   host="sql103.epizy.com ",
   user="epiz_28407868",
-  password="5P8RMUURN3Ps"
+  password="5P8RMUURN3Ps",
 )
+
+mycursor = mydb.cursor()
+
+mycursor.execute("CREATE DATABASE level_database")
 
 
 client = commands.Bot(command_prefix='&')
@@ -22,7 +26,7 @@ async def on_ready():
 @client.command()
 async def enable_leveling(ctx):
   sender_id = str(ctx.author)
-  db[sender_id] = 0
+  mydb[sender_id] = 0
   await ctx.send("You are now in the leveling database.")
   
 
@@ -107,7 +111,7 @@ async def kick(ctx, member: discord.Member, *, reason=None):
 
 @client.event
 async def on_member_join(member: discord.Member):
-  db[member] = "";
+  mydb[member] = "";
   print(f'{member} has joined a server.')
   await ctx.send(f'Welcome to the server {member}')
     
