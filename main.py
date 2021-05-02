@@ -109,6 +109,6 @@ async def on_member_remove(member: discord.Member):
   print(f'{member} has left a server.')
 
 
-config = os.environ['token']
+config = os.environ['TOKEN']
 client.run(config)
 
