@@ -1,8 +1,16 @@
 import discord
 from discord.ext import commands
 from discord.utils import get
+from replit import db
 import mysql.connector
 import os
+
+mydb = mysql.connector.connect(
+  host="sql103.epizy.com ",
+  user="epiz_28407868",
+  password="5P8RMUURN3Ps"
+)
+
 
 client = commands.Bot(command_prefix='&')
 
