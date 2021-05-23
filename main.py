@@ -1,5 +1,6 @@
 import discord
 import requests
+import keepalive
 import aiosqlite
 from discord.ext import commands
 from discord.utils import get
@@ -509,5 +510,6 @@ async def level_up(users, user, message):
 
 
 config = os.environ['DISCORD_TOKEN']
+keep_alive.keep_alive()
 client.run(config)
 
