@@ -508,6 +508,6 @@ async def level_up(users, user, message):
         users[f'{user.id}']['level'] = lvl_end
 
 
-config = os.environ['TOKEN']
+config = os.environ['DISCORD_TOKEN']
 client.run(config)
 
