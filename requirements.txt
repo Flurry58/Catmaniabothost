@@ -61,9 +61,7 @@ lockfile==0.12.2
 m2r==0.2.1
 Markdown==3.3.4
 MarkupSafe==2.0.0
-matplotlib==3.4.1
 mistune==0.8.4
-monkeylearn==3.5.2
 msgpack==1.0.2
 multidict==5.1.0
 oauthlib==3.1.0
